@@ -1,0 +1,237 @@
+:root{
+    --background:#f1c40f;
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family:  Arial, sans-serif;
+    scroll-behavior: smooth;
+}
+body{
+    background-color: #eeeeee;
+    scroll-behavior: smooth;
+}
+/*header strart*/
+body>header{
+    display: flex;
+    padding: 10px 0;
+    position: fixed;
+    width: 100%;
+    z-index: 1;
+    background-color: #eeeeee;
+}
+body>header img{
+    width: 370px;
+    padding: 0 45px;
+}
+body>header nav{
+    flex-grow: 1;
+    display: flex;
+    justify-content: flex-end;
+}
+body>header nav ul {
+    display: flex;
+    list-style: none;
+    align-items: center;
+    height: 100%;
+    width: calc(60% + 50px);
+    justify-content: space-evenly;
+    gap: 5px;
+}
+a {
+    text-decoration: none;
+    color: black;
+    white-space: nowrap;
+}
+@media (max-width:650px) {
+    header nav ul{
+        flex-direction: column;
+    }
+}
+@media (max-width:600px) {
+    header{
+        flex-direction: column;
+        align-items: center;
+    }
+    header img{
+        width: 100%;
+        min-width: 300px;
+        max-width: 450px;
+    }
+    header nav{
+        justify-content: center;
+    }
+    header nav ul {
+        width: 100%;
+    }
+}
+/*header end*/
+/*form start*/
+form{
+    padding-top: 85px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+form h2{
+    margin-bottom: 20px;
+    text-align: center;
+}
+form input[type="email"]{
+    margin-bottom: 15px;
+    min-width: 275px;
+    padding: 5px;
+    font-size: 13px;
+}
+form input:last-child{
+    background-color: var(--background);
+    border: none;
+    padding: 5px;
+    font-weight: 800;
+    cursor: pointer;
+}
+@media (max-width:600px) {
+    form{
+        padding-top: 150px;
+    }
+}
+/*form end*/
+/*icon-section start*/
+.icon-section{
+    width: 100%;
+    max-width: 925px;
+    margin: auto;
+    margin-top: 115px;
+    padding: 0 10px 0 45px;
+}
+.container{
+    display: flex;
+    justify-content: center;
+    gap: 80px;
+}
+.icon-container{
+    width: 70px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 80px;
+}
+.icon-container i{
+    color: #ff8c00;
+}
+.text{
+    width: 90%;
+}
+@media (max-width:600px) {
+    .icon-section{
+        margin-top: 70px;
+        padding: 0 18px;
+    }
+    .container{
+        gap: 40px;
+    }
+}
+@media (max-width:550px) {
+    .icon-section{
+        padding: 0;
+    }
+    .icon-container{
+        display: none;
+    }
+    .text{
+        text-align: center;
+        margin-bottom: 50px;
+    }
+}
+/*icon section end*/
+/*vidoe-section start*/
+iframe{
+    position: relative;
+    left: 50%;
+    transform: translate(-50%);
+    margin-bottom: 70px;
+}
+@media (max-width:580px) {
+    iframe{
+        width: calc(100% - 20px) !important;
+    }
+    
+}
+/*vidoe-section end*/
+/* 240
+980 */
+/* card-section start */
+.card-section{
+    width: calc(100% - 20px);
+    max-width: 980px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(245px,1fr));
+    margin-bottom: 45px;
+    gap: 20px;
+    
+}
+.card{
+    border: 1px solid black;
+}
+.card header{
+    padding: 20px 0 ;
+    text-align: center;
+    background-color: #dddddd;
+    font-weight: bold;
+}
+.card p,.card h2{
+    text-align: center;
+}
+.card h2,.card button{
+    margin: 20px 0;
+}
+.card p{
+    margin: 10px 0;
+}
+.card button{
+    position: relative;
+    left: 50%;
+    transform: translate(-50%);
+    padding: 10px 15px;
+    background-color: var(--background);
+    border: none;
+    transition: background-color 0.3s;
+    cursor: pointer;
+}
+.card button:hover{
+    background-color: #feb200;
+}
+@media (max-width:650px) {
+    .card-section{
+        width: 280px;
+    }
+}
+/* card-section end */
+/* footer start */
+footer{
+    background-color: #dddddd;
+    padding: 20px;
+    max-width: 1000px;
+    position: relative;
+    left: 50%;
+    transform: translate(-50%);
+    width: 100%;
+}
+footer ul{
+    display: flex;
+    justify-content: flex-end;
+    list-style: none; 
+    margin-bottom: 10px;
+}
+footer ul li{
+    margin: 0 10px;
+}
+footer p{
+    text-align: right;
+    color: #444;
+    font-size: 15px;
+}
+
+/* footer end */
